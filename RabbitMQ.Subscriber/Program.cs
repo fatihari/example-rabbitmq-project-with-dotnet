@@ -10,14 +10,18 @@ factory.Uri = new Uri("amqps://irmzupyn:SOCHv673h3Yq-VdJWSj97fnJHz23uDC6@moose.r
 using var connection = factory.CreateConnection();
 
 var channel = connection.CreateModel();
-//durable = "false" => memory üzerinde tutulur, rabbitmq restart atılırsa memory'deki bu kuyruk gider.
-//durable = "true"  => fiziksel olarak kaydedilir, rabmq restart atılırsa dahi bu kuyruk kaybolmaz.
+
 //exclusive="true"  => bu kuyruğa yalnızca yaratılan channel üzerindem erişilir.
 //exclusive="false" => ise bu kuyruğa subscriber(farklı kanallar) üzerinden de erişilebilir.
 //autoDelete="true" => subscribe channelı silinirse bu kuyruk silinsin mi ? hayır diyoruz.
 
-//publisherda zaten oluşturduk, ancak burada da olması(parametreler aynı olmalı) ha ta vermez.
-channel.QueueDeclare("hello-queue", true, false, false);
+//durable = "false" => memory üzerinde tutulur, rabbitmq restart atılırsa memory'deki bu exchange kaybolur.
+//durable = "true"  => fiziksel olarak kaydedilir, rabmq restart atılırsa dahi bu exchange kaybolmaz.
+//publisherda zaten oluşturduk, ancak burada da olması(parametreler aynı olmalı) ha ta vermez. Boşuna çalıştırmayalım yine de.
+// channel.ExchangeDeclare("logs-fanout", durable: true, type: ExchangeType.Fanout);
+
+var randomQueueName = channel.QueueDeclare().QueueName; //rasgele kuyruk ismi oluşturur.
+channel.QueueBind(randomQueueName, "log-fanout", "", null);
 
 //prefetchSize:  0 => herhangi boyuttaki mesajı gönderebilirsin.
 //prefetchCount: 6 => 6'şar 6'şar YA DA toplam 6 tane göndersin. hangisini seçeceğini "global" belirler.
@@ -31,7 +35,9 @@ var consumer = new EventingBasicConsumer(channel);
 
 //autoAck: true => message consumer'a geldiği gibi otomatik silmesi için.
 //autoAck: false=> rabbitmq sen mesajı silme ben sana haber edeceğim zaman mesajı sil.
-channel.BasicConsume("hello-queue", false, consumer);
+channel.BasicConsume(randomQueueName, false, consumer);
+
+Console.WriteLine("Loglar Dinleniyor...");
 
 //message consumer'a (subscriber'a) ulaştığında event fırlatılır.
 consumer.Received += (sender, e) =>

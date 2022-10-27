@@ -9,22 +9,20 @@ factory.Uri = new Uri("amqps://irmzupyn:SOCHv673h3Yq-VdJWSj97fnJHz23uDC6@moose.r
 using var connection = factory.CreateConnection();
 
 var channel = connection.CreateModel();
-//durable = "false" => memory üzerinde tutulur, rabbitmq restart atılırsa memory'deki bu kuyruk gider.
-//durable = "true"  => fiziksel olarak kaydedilir, rabmq restart atılırsa dahi bu kuyruk kaybolmaz.
-//exclusive="true"  => bu kuyruğa yalnızca yaratılan channel üzerindem erişilir.
-//exclusive="false" => ise bu kuyruğa subscriber(farklı kanallar) üzerinden de erişilebilir.
-//autoDelete="true" => subscribe channelı silinirse bu kuyruk silinsin mi ? hayır diyoruz.
-channel.QueueDeclare("hello-queue", true, false, false);
+
+//durable = "false" => memory üzerinde tutulur, rabbitmq restart atılırsa memory'deki bu exchange kaybolur.
+//durable = "true"  => fiziksel olarak kaydedilir, rabmq restart atılırsa dahi bu exchange kaybolmaz.
+channel.ExchangeDeclare("logs-fanout", durable: true, type: ExchangeType.Fanout);
 
 //tek sefer calistiginda 50 tane message gidecek.
 Enumerable.Range(1,50).ToList().ForEach(x =>
 {
-    string message = $"Message {x}"; //rabbitmq'ya byte array şeklinde gönderilir. pdf, resim hersey boyle gonderilebilir.
+    string message = $"log {x}"; //rabbitmq'ya byte array şeklinde gönderilir. pdf, resim hersey boyle gonderilebilir.
 
     var messageBody = Encoding.UTF8.GetBytes(message);
 
-    //exchange başlangıçta kullanmıyoruz o yüzden empty deriz.
-    channel.BasicPublish(string.Empty, "hello-queue", null, messageBody);
+    //queue başlangıçta kullanmazsak o yüzden routingKey'i boş bırakırız. Ancak kuyruk olmadığı zaman mesajlar boşa gider.
+    channel.BasicPublish("logs-fanout", "", null, messageBody);
     Console.WriteLine($"Your message has been sent. {message}");
 });
 Console.ReadLine();

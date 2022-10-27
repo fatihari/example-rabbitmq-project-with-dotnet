@@ -5,7 +5,7 @@ using RabbitMQ.Client.Events;
 var factory = new ConnectionFactory();
 
 //https://customer.cloudamqp.com/instance/ adresindeki instance'a tıklanıp AMQP Url kopyalanır.
-factory.Uri = new Uri("amqps://irmzupyn:SOCHv673h3Yq-VdJWSj97fnJHz23uDC6@moose.rmq.cloudamqp.com/irmzupyn");
+factory.Uri = new Uri("yukarıdaki urlden kopyala");
 
 using var connection = factory.CreateConnection();
 

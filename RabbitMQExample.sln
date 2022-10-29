@@ -1,8 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Publisher", "RabbitMQ.Publisher\RabbitMQ.Publisher.csproj", "{DDBA1BBE-D218-43A7-9FB2-83A1DC6BF737}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanout.Publisher", "1-Fanout.Publisher\1-Fanout.Publisher.csproj", "{DDBA1BBE-D218-43A7-9FB2-83A1DC6BF737}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Subscriber", "RabbitMQ.Subscriber\RabbitMQ.Subscriber.csproj", "{5E59BDBB-9434-471E-8808-28151F69FF69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanout.Subscriber", "1-Fanout.Subscriber\1-Fanout.Subscriber.csproj", "{5E59BDBB-9434-471E-8808-28151F69FF69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Direct.Publisher", "2-Direct.Publisher\2-Direct.Publisher.csproj", "{1525C1E1-7D6C-4091-AFBF-AA90BEAAD653}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Direct.Subscriber", "2-Direct.Subscriber\2-Direct.Subscriber.csproj", "{71C090FD-97A9-43AB-BA79-C55A29B6AFE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Topic.Publisher", "3-Topic.Publisher\3-Topic.Publisher.csproj", "{935E15FB-E0B0-418C-8220-07008301ED5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Topic.Subscriber", "3-Topic.Subscriber\3-Topic.Subscriber.csproj", "{96B17B90-86F2-41D0-9527-7A66DE1EEBDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Header.Publisher", "4-Header.Publisher\4-Header.Publisher.csproj", "{158D3126-011A-43BD-B87F-70EADEF44A53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Header.Subscriber", "4-Header.Subscriber\4-Header.Subscriber.csproj", "{5880038F-FDE7-49B1-A6D4-E611A1D57DA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{AD10359C-39B4-47DE-9F3D-00DE62C6BFE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatermarkApp", "WatermarkApp\WatermarkApp.csproj", "{94436389-2BD4-4D6E-B952-388D11EFD422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateExcelApp", "CreateExcelApp\CreateExcelApp.csproj", "{95B46DA8-9ACD-4BA2-AD30-C2636D157B98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateFileWorkerService", "CreateFileWorkerService\CreateFileWorkerService.csproj", "{D0FA8AB1-67C3-4AED-8254-695C3C274BDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +38,45 @@ Global
 		{5E59BDBB-9434-471E-8808-28151F69FF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E59BDBB-9434-471E-8808-28151F69FF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E59BDBB-9434-471E-8808-28151F69FF69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1525C1E1-7D6C-4091-AFBF-AA90BEAAD653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1525C1E1-7D6C-4091-AFBF-AA90BEAAD653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1525C1E1-7D6C-4091-AFBF-AA90BEAAD653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1525C1E1-7D6C-4091-AFBF-AA90BEAAD653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71C090FD-97A9-43AB-BA79-C55A29B6AFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71C090FD-97A9-43AB-BA79-C55A29B6AFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71C090FD-97A9-43AB-BA79-C55A29B6AFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71C090FD-97A9-43AB-BA79-C55A29B6AFE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{935E15FB-E0B0-418C-8220-07008301ED5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935E15FB-E0B0-418C-8220-07008301ED5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935E15FB-E0B0-418C-8220-07008301ED5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935E15FB-E0B0-418C-8220-07008301ED5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B17B90-86F2-41D0-9527-7A66DE1EEBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B17B90-86F2-41D0-9527-7A66DE1EEBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B17B90-86F2-41D0-9527-7A66DE1EEBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B17B90-86F2-41D0-9527-7A66DE1EEBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158D3126-011A-43BD-B87F-70EADEF44A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158D3126-011A-43BD-B87F-70EADEF44A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158D3126-011A-43BD-B87F-70EADEF44A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158D3126-011A-43BD-B87F-70EADEF44A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5880038F-FDE7-49B1-A6D4-E611A1D57DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5880038F-FDE7-49B1-A6D4-E611A1D57DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5880038F-FDE7-49B1-A6D4-E611A1D57DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5880038F-FDE7-49B1-A6D4-E611A1D57DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD10359C-39B4-47DE-9F3D-00DE62C6BFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD10359C-39B4-47DE-9F3D-00DE62C6BFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD10359C-39B4-47DE-9F3D-00DE62C6BFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD10359C-39B4-47DE-9F3D-00DE62C6BFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94436389-2BD4-4D6E-B952-388D11EFD422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94436389-2BD4-4D6E-B952-388D11EFD422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94436389-2BD4-4D6E-B952-388D11EFD422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94436389-2BD4-4D6E-B952-388D11EFD422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95B46DA8-9ACD-4BA2-AD30-C2636D157B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B46DA8-9ACD-4BA2-AD30-C2636D157B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B46DA8-9ACD-4BA2-AD30-C2636D157B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B46DA8-9ACD-4BA2-AD30-C2636D157B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0FA8AB1-67C3-4AED-8254-695C3C274BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0FA8AB1-67C3-4AED-8254-695C3C274BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0FA8AB1-67C3-4AED-8254-695C3C274BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0FA8AB1-67C3-4AED-8254-695C3C274BDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

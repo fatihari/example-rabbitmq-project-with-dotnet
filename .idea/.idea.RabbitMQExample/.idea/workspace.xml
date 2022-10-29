@@ -22,7 +22,7 @@
     <projectFile profileName="IIS Express">WatermarkApp/WatermarkApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c3b081e-7cd9-4d4e-9f55-fbd7a059c9d7" name="Changes" comment="edited workspace">
+    <list default="true" id="1c3b081e-7cd9-4d4e-9f55-fbd7a059c9d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/dataSources.local.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/dataSources.xml" beforeDir="false" />
@@ -34,7 +34,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/indexLayout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/projectSettingsUpdater.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brewlog.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

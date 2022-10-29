@@ -23,34 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3b081e-7cd9-4d4e-9f55-fbd7a059c9d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Controllers/FilesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Controllers/ProductController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Hubs/MyHub.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Models/AppDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Models/UserFile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Services/RabbitMqClientService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Services/RabbitMqProducer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Views/Account/Login.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Views/Product/Files.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Views/Product/Files.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Views/Product/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateExcelApp/Views/Product/Index.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateFileWorkerService/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateFileWorkerService/Services/RabbitMqClientService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/CreateExcelMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Product.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WatermarkApp/BackgroundServices/ImageWatermarkProcessBackgroundService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WatermarkApp/Models/AppDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WatermarkApp/Models/Product.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WatermarkApp/Services/ProductImageCreatedEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WatermarkApp/Services/RabbitMQClientService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WatermarkApp/Services/RabbitMQProducer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RabbitMQExample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabbitMQ.Publisher/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabbitMQ.Publisher/RabbitMQ.Publisher.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabbitMQ.Subscriber/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabbitMQ.Subscriber/RabbitMQ.Subscriber.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabbitMQExample.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RabbitMQExample.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,5 +265,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
